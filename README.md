@@ -1,4 +1,5 @@
-### Admin Panel
+# Admin Panel
+
 <div aligin="center">
 I had a homework about database.I wanted to make a different project. That's why I decided to make a web project but I didn't know about Asp.Net MVC.
 I have tried to make a admin panel which add catagory, products, customers and sales control. When I started this project, I didn't know anything about backend.

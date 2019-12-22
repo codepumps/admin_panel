@@ -1,0 +1,18 @@
+﻿@model Veritabani_Homework.Models.Entity.Tbl_Kategoriler
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<div class="jumbotron" style="padding: 20px">
+    <h1>Detaylar</h1>
+    <p class="lead">Kategori Id: @Model.Kategori_Id</p>
+    <hr class="my-4">
+    <p>Kategori Adı: @Model.Kategori_Ad</p>
+    <img src="@Url.Content(Session["ImagePath"].ToString())" height="200" width="200" style="margin-bottom: 10px" />
+</div>
+<div>
+    @Html.ActionLink("Kategorilere geri dön", "Index", "Kategori", new { @class = "btn btn-danger" })
+</div>
+<link href="~/Content/bootstrap.css" rel="stylesheet" />
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />

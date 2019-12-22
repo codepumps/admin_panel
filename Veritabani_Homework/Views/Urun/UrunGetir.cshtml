@@ -1,0 +1,33 @@
+﻿@model Veritabani_Homework.Models.Entity.Tbl_Urunler
+@{
+    ViewBag.Title = "UrunGetir";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+@using (Html.BeginForm("Guncelle", "Urun", FormMethod.Post))
+{
+<div class="form-group">
+    <strong>Ürün Id</strong>
+    @Html.TextBoxFor(m => m.UrunId, new { @class = "form-control" })
+    <br />
+    <strong>Ürün Adı</strong>
+    @Html.TextBoxFor(m => m.UrunAd, new { @class = "form-control" })
+    <br />
+    <strong>Marka</strong>
+    @Html.TextBoxFor(m => m.Marka, new { @class = "form-control" })
+    <br />
+    <strong>Ürün Kategori</strong>
+    @Html.DropDownListFor(m=>m.Tbl_Kategoriler.Kategori_Id,(List<SelectListItem>)ViewBag.dgr, new {@class="form-control"})
+    @*@Html.TextBoxFor(m => m.UrunKategori, new { @class = "form-control" })*@
+    <br />
+    <strong>Fiyat</strong>
+    @Html.TextBoxFor(m => m.Fiyat, new { @class = "form-control" })
+    <br />
+    <strong>Stok</strong>
+    @Html.TextBoxFor(m => m.Stok, new { @class = "form-control" })
+</div>
+
+    <div>
+        <button class="btn btn-warning">Ürün Güncelle</button>
+    </div>
+}

@@ -1,0 +1,45 @@
+﻿@using Veritabani_Homework.Models.Entity
+@using PagedList
+@using PagedList.Mvc <!--Her sayfada 5 ürün listelenecek ve sayfalar arası geçiş için rakamlar koyacağız.Bunları da pagedList üzerinden ayarlayacağız.-->
+@model PagedList.IPagedList<Tbl_Kategoriler>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<table class="table table-bordered table-hover">
+    <thead class="progress-bar-info ">
+        <tr>
+            <th>KATEGORI ID</th>
+            <th>KATEGORI ADI</th>
+            <th>KATEGORI RESIM</th>
+            <th>SIL</th>
+            <th>GUNCELLE</th>
+            <th>DETAY BILGISI</th>
+        </tr>
+    </thead>
+    <tbody>
+    @foreach (var kategori in Model)
+    {
+        <tr>
+            <th>@kategori.Kategori_Id</th>
+            <td>@kategori.Kategori_Ad</td>
+            <td>
+                <img src="@Url.Content(kategori.ImagePath)" width="100" height="100" class="img-rounded"/>
+            </td>
+            <td>
+                <a href="/Kategori/Sil/@kategori.Kategori_Id" class="btn btn-danger">SIL</a>
+            </td>
+            <td>
+                <a href="/Kategori/Guncelle/@kategori.Kategori_Id" class="btn btn-success">GUNCELLE</a>
+            </td>
+            <td>
+                @Html.ActionLink("Details", "Details", new {id = kategori.Kategori_Id}, new {@class = "btn btn-info"})
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>
+@Html.PagedListPager((IPagedList)Model, sayfa => Url.Action("Index", new { sayfa }))
+<a href="/Kategori/KategoriEkle/" class="btn btn-primary">Yeni Kategori Ekle</a>
+<h4 class="text-success">@TempData["msg"]</h4>

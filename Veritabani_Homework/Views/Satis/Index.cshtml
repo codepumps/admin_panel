@@ -1,0 +1,39 @@
+﻿@model Veritabani_Homework.Models.Entity.Tbl_Satislar
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Modal1">Satış Yap</button>
+
+    <div class="modal" id="Modal1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title">Satış Yapma Ekranı</h2>
+                </div>
+                <form method="post" action="/Satis/YeniSatis">
+                    <div class="modal-body">
+                        <label>Ürün Adı</label>
+                        @*@Html.DropDownListFor(u=>u.Tbl_Urunler.UrunId, new SelectList(Model.,"UrunId","UrunAd"),"Select")*@
+                        @*@Html.DropDownListFor(u => u.Tbl_Urunler.UrunId, (List<SelectListItem>)ViewBag.dgr, new { @class = "form-control" })*@
+                        @Html.TextBoxFor(u=>u.Urun,new  {@class="form-control"})
+                        <br />
+                        <label>Müşteri Adı Soyadı</label>
+                        @Html.TextBoxFor(u => u.Musteri, new { @class = "form-control" })
+                        <br />
+                        <label>Adet</label>
+                        @Html.TextBoxFor(u => u.Adet, new { @class = "form-control" })
+                        <br />
+                        <label>Fiyat</label>
+                        @Html.TextBoxFor(u => u.Fiyat, new { @class = "form-control" })
+                        <br />
+                        <button type="submit" class="btn btn-info">Satış Yap</button>
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Vazgeç</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+

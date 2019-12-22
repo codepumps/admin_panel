@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<!-- saved from url=(0066)http://127.0.0.1:5500/Front-End/Bootstrap/Left-Side-Bar/index.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    
+<link rel="stylesheet" href="./index_files/style.css"><link rel="stylesheet" href="./index_files/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous"></head>
+
+<body cz-shortcut-listen="true" style="">
+
+    <div id="mySidenav" class="sidenav" style="width: 250px;">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <div class="hoverside">
+
+            <a href="http://127.0.0.1:5500/Kategori/Index">
+                <div>
+                    <i class="fas fa-clipboard-list add"></i>
+                </div>
+                <div>Kategoriler</div>
+            </a>
+
+            <a href="http://127.0.0.1:5500/Urun/Index">
+                <div>
+                    <i class="fab fa-product-hunt add"></i>
+                </div>
+                <div>Ürünler</div>
+            </a>
+            
+            <a href="http://127.0.0.1:5500/Musteri/Index">
+                <div>
+                    <i class="fas fa-users add"></i>
+                </div>
+                <div>Müşteriler</div>
+            </a>
+
+            <a href="http://127.0.0.1:5500/Satis/Index">
+                <div>
+                    <i class="fas fa-chart-line add"></i>
+                </div>
+                <div>Satışlar</div>
+            </a>
+
+            <a href="http://127.0.0.1:5500/Default/Index">
+                <div>
+                    <i class="fas fa-question add"></i>
+                </div>
+                <div>Yardım Menüsü</div>
+            </a>
+
+            <a href="http://127.0.0.1:5500/Front-End/Bootstrap/Left-Side-Bar/@Url.Action(%22LogOut%22,%22AdminLogin%22)">
+                <div>
+                    <i class="fas fa-unlock add"></i>
+                </div>
+                <div>Çıkış Yap</div>
+            </a>
+
+        </div>
+    </div>
+
+    <div id="main" style="margin-left: 250px;">
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()">☰ open</span>
+    </div>
+
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+        }
+    </script>
+
+<!-- Code injected by live-server -->
+<script type="text/javascript">
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+</body></html>

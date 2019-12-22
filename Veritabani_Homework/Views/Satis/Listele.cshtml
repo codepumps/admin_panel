@@ -1,0 +1,37 @@
+﻿@using Veritabani_Homework.Models.Entity
+@model List<Tbl_Satislar>
+@{
+    ViewBag.Title = "Listele";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<table class="table table-bordered table-hover">
+    <thead class="progress-bar-info ">
+    <tr>
+        <th>SATIS NO</th>
+        <th>URUN ADI</th>
+        <th>MUSTERİ</th>
+        <th>URUN ADET</th>
+        <th>FİYAT</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var satis in Model)
+    {
+        <tr>
+            <th>@satis.Satis_No</th>
+            <td>@satis.Tbl_Urunler.UrunAd</td>
+            <td>
+                @satis.Tbl_Musteriler.Musteri_Ad @satis.Tbl_Musteriler.Musteri_Soyad
+            </td>
+            <td>
+                @satis.Adet
+            </td>
+            <td>
+                @satis.Fiyat
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>
+

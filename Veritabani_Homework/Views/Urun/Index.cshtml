@@ -1,0 +1,41 @@
+﻿@using Veritabani_Homework.Models.Entity;
+@using PagedList
+@using PagedList.Mvc
+@model  PagedList.IPagedList<Tbl_Urunler>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<table class="table table-bordered">
+    <thead class="progress-bar-info">
+        <tr>
+            <th>URUN ID</th>
+            <th>URUN ADI</th>
+            <th>MARKASI</th>
+            <th>KATEGORI</th>
+            <th>FIYAT</th>
+            <th>STOK</th>
+            <th>SIL</th>
+            <th>GUNCELLE</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var urun in Model)
+        {
+            <tr>
+                <th>@urun.UrunId</th>
+                <td>@urun.UrunAd</td>
+                <td>@urun.Marka</td>
+                <td>@urun.Tbl_Kategoriler.Kategori_Ad</td>
+                <td>@urun.Fiyat</td>
+                <td>@urun.Stok</td>
+                <th><a href="/Urun/UrunSil/@urun.UrunId" class="btn btn-danger">SIL</a></th>
+                <th><a href="/Urun/UrunGetir/@urun.UrunId" class="btn btn-success">GUNCELLE</a></th>
+            </tr>
+        }
+    </tbody>
+</table>
+@Html.PagedListPager((IPagedList)Model, sayfa => Url.Action("Index", new { sayfa }))
+<a href="/Urun/UrunEkle" class="btn btn-primary">Yeni Ürün Ekle</a>
+

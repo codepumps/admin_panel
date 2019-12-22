@@ -1,0 +1,24 @@
+﻿@model Veritabani_Homework.Models.Entity.Tbl_Musteriler
+@{
+    ViewBag.Title = "MusteriGetir";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+@using (Html.BeginForm("Guncelle", "Musteri", FormMethod.Post))
+{
+    <div class="form-group">
+        <strong>Müşteri No</strong>
+        @Html.TextBoxFor(m => m.Musteri_No, new { @class = "form-control" })
+        <br />
+        <strong>Müşteri Adı</strong>
+        @Html.TextBoxFor(m => m.Musteri_Ad, new { @class = "form-control" })
+        <br />
+        <strong>Müşteri Soyadı</strong>
+        @Html.TextBoxFor(m => m.Musteri_Soyad, new { @class = "form-control" })
+    </div>
+
+    <div>
+        <button class="btn btn-warning">Müşteri Güncelle</button>
+    </div>
+}
+

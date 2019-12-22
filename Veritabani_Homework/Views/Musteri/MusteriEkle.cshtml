@@ -1,0 +1,31 @@
+﻿@model Veritabani_Homework.Models.Entity.Tbl_Musteriler
+@{
+    ViewBag.Title = "MusteriEkle";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<form method="post" class="form-group">
+    <div>
+        <label>Müşteri Adı</label>
+        @Html.TextBoxFor(m => m.Musteri_Ad, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Musteri_Ad, "", new { @style = "color:red" })
+    </div>
+    <div style="margin-top: 15px">
+        <label>Müşteri Soyadı</label>
+        <input type="text" class="form-control" name="Musteri_Soyad" />
+    </div>
+    <div style="margin-top: 15px">
+        <button class="btn btn-info" id="btn1">Yeni Müşteri Ekle</button>
+    </div>
+
+</form>
+<div>
+    @Html.ActionLink("Müşterilere geri dön", "Index", "Musteri", new { @class = "btn btn-danger" })
+</div>
+
+<script>
+    $('#btn1').click(function() {
+        alert("Müşteri Ekleme Işlemi Yapıldı.");
+    });
+</script>
+

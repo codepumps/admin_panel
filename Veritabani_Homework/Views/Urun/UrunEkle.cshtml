@@ -1,0 +1,35 @@
+﻿@model Veritabani_Homework.Models.Entity.Tbl_Urunler
+@{
+    ViewBag.Title = "UrunEkle";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+<!--requrired olduğu zaman boş geçilemez veya maxlength ile max uzunluğu belirleyebiliriz.-->
+<form method="post" class="form-group">
+    <div>
+        <label>Ürün Adı</label>
+        <input type="text" class="form-control" name="UrunAd" required=""/>
+    </div>
+    <div style="margin-top: 15px">
+        <label>Ürün Markası</label>
+        <input type="text" class="form-control" name="Marka" required="" placeholder="Markası..."/>
+    </div>
+    <div style="margin-top: 15px">
+        <label>Kategori Seçiniz</label>
+        @Html.DropDownListFor(m=>m.Tbl_Kategoriler.Kategori_Id,(List<SelectListItem>)ViewBag.dgr,new {@class="form-control"})
+    </div>
+    <div style="margin-top: 15px">
+        <label>Ürün Fiyat</label>
+        <input type="text" class="form-control" name="Fiyat" required="" />
+    </div>
+    <div style="margin-top: 15px">
+        <label>Stok Adedi</label>
+        <input type="text" class="form-control" name="Stok" required="" />
+    </div>
+    <div style="margin-top: 15px">
+        <button class="btn btn-info">Yeni Ürün Ekle</button>
+    </div>
+
+</form>
+<div>
+    @Html.ActionLink("Ürünlere geri dön", "Index", "Urun", new { @class = "btn btn-danger" })
+</div>

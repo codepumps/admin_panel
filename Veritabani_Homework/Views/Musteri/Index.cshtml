@@ -1,0 +1,42 @@
+﻿@using Veritabani_Homework.Models.Entity
+@using PagedList
+@using PagedList.Mvc
+@model PagedList.IPagedList<Tbl_Musteriler>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+@using (Html.BeginForm("Index", "Musteri", FormMethod.Get))
+{
+    <p>
+        <b>Aranacak Müşteri Adı:</b> @Html.TextBox("gelen")
+        <input style="border-radius: 5px; color: #fff; background: red; border: none; height: 28px" type="submit" value="ara" />
+    </p>
+}
+<table class="table table-bordered">
+    <thead class="progress-bar-info">
+        <tr>
+            <th>MUSTERI NO</th>
+            <th>MUSTERI AD</th>
+            <th>MUSTERI SOYAD</th>
+            <th>SIL</th>
+            <th>GUNCELLE</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var musteri in Model)
+        {
+            <tr>
+                <td>@musteri.Musteri_No</td>
+                <td>@musteri.Musteri_Ad</td>
+                <td>@musteri.Musteri_Soyad</td>
+                <td><a href="/Musteri/MusteriSil/@musteri.Musteri_No" class="btn btn-danger">SIL</a></td>
+                <td><a href="/Musteri/MusteriGetir/@musteri.Musteri_No" class="btn btn-success">GUNCELLE</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
+@Html.PagedListPager((IPagedList)Model, sayfa => Url.Action("Index", new { sayfa }))
+<a href="/Musteri/MusteriEkle" class="btn btn-primary">Yeni Musteri Ekle</a>
+

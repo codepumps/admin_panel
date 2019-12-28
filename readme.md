@@ -54,6 +54,7 @@ public ActionResult CatagoryAdd(Tbl_Kategoriler image,HttpPostedFileBase file){
 ```
 __Update Image__
 
+```
 [HttpPost]
         public ActionResult Guncelle(Tbl_Kategoriler k, HttpPostedFileBase file)
         {
@@ -112,9 +113,10 @@ __Update Image__
                 }
             }
                 return View();
-            }
+          }
+```
             
-´´´
+           
 
 ![Markdown Logo](https://github.com/codepumps/admin_panel/blob/master/share_img/admin.png)
 

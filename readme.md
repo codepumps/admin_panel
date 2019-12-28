@@ -8,9 +8,6 @@ Generally for backend I used Asp.NET MVC with Entity framework database first ap
 </div>
 
 
-
-__I want to share this code which showing you How can you add image and How can you update image ? Because when I was coding, It was taking my time.__
-
 ## View of the project
 
 ![Markdown Logo](https://github.com/codepumps/admin_panel/blob/master/share_img/admin.png)
@@ -23,6 +20,9 @@ __I want to share this code which showing you How can you add image and How can 
 
 ![Markdown Logo](https://github.com/codepumps/admin_panel/blob/master/share_img/database.png)
 ![Markdown Logo](https://github.com/codepumps/admin_panel/blob/master/share_img/customer.png)
+
+
+__I want to share this code which showing you How can you add image and How can you update image ? Because when I was coding, It was taking my time.__
 
 __Add image__
 

@@ -51,7 +51,7 @@ public ActionResult CatagoryAdd(Tbl_Kategoriler image,HttpPostedFileBase file){
             }
             return View();
         }
-
+```
 __Update Image__
 
 [HttpPost]

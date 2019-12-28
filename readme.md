@@ -12,6 +12,8 @@ Generally for backend I used Asp.NET MVC with Entity framework database first ap
 __I want to share this code which showing you How can you add image and How can you update image ? Because when I was coding, It was taking my time.__
 
 
+__Add image__
+
 ```
 [HttpPost]
 public ActionResult CatagoryAdd(Tbl_Kategoriler image,HttpPostedFileBase file){
@@ -49,10 +51,9 @@ public ActionResult CatagoryAdd(Tbl_Kategoriler image,HttpPostedFileBase file){
             }
             return View();
         }
-´´´
 
+__Update Image__
 
-´´´
 [HttpPost]
         public ActionResult Guncelle(Tbl_Kategoriler k, HttpPostedFileBase file)
         {
@@ -112,7 +113,7 @@ public ActionResult CatagoryAdd(Tbl_Kategoriler image,HttpPostedFileBase file){
             }
                 return View();
             }
-
+            
 ´´´
 
 ![Markdown Logo](https://github.com/codepumps/admin_panel/blob/master/share_img/admin.png)

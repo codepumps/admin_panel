@@ -11,6 +11,18 @@ Generally for backend I used Asp.NET MVC with Entity framework database first ap
 
 __I want to share this code which showing you How can you add image and How can you update image ? Because when I was coding, It was taking my time.__
 
+## View of the project
+
+![Markdown Logo](https://github.com/codepumps/admin_panel/blob/master/share_img/admin.png)
+
+![Markdown Logo](https://github.com/codepumps/admin_panel/blob/master/share_img/catagory.png)
+![Markdown Logo](https://github.com/codepumps/admin_panel/blob/master/share_img/add_catagory.png)
+
+![Markdown Logo](https://github.com/codepumps/admin_panel/blob/master/share_img/protuct.png)
+![Markdown Logo](https://github.com/codepumps/admin_panel/blob/master/share_img/update.png)
+
+![Markdown Logo](https://github.com/codepumps/admin_panel/blob/master/share_img/database.png)
+![Markdown Logo](https://github.com/codepumps/admin_panel/blob/master/share_img/customer.png)
 
 __Add image__
 
@@ -118,13 +130,3 @@ __Update Image__
             
            
 
-![Markdown Logo](https://github.com/codepumps/admin_panel/blob/master/share_img/admin.png)
-
-![Markdown Logo](https://github.com/codepumps/admin_panel/blob/master/share_img/catagory.png)
-![Markdown Logo](https://github.com/codepumps/admin_panel/blob/master/share_img/add_catagory.png)
-
-![Markdown Logo](https://github.com/codepumps/admin_panel/blob/master/share_img/protuct.png)
-![Markdown Logo](https://github.com/codepumps/admin_panel/blob/master/share_img/update.png)
-
-![Markdown Logo](https://github.com/codepumps/admin_panel/blob/master/share_img/database.png)
-![Markdown Logo](https://github.com/codepumps/admin_panel/blob/master/share_img/customer.png)
